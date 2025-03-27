@@ -7,7 +7,10 @@ const TaskForm = ({ onAddTask }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !description) return;
+    if (!title || !description) {
+      alert("Please enter title and description!");
+      return;
+    }
     onAddTask({ title, description, completed: false });
     setTitle("");
     setDescription("");
