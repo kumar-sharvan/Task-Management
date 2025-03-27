@@ -22,7 +22,7 @@ const TaskItem = ({ task, onUpdateTask, onDeleteTask }) => {
         </span>
       </div>
       <button
-        className="btn btn-danger btn-sm"
+        className="btn btn-danger btn-sm mb-2"
         onClick={() => onDeleteTask(task._id)}
       >
         Delete
