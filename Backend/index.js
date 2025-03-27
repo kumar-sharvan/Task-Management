@@ -11,7 +11,12 @@ dotenv.config();
 connectDB();
 
 // Middleware
-app.use(cors());
+// Allow frontend to access backend
+app.use(cors({
+  origin: "https://task-management-frontend-xush.onrender.com", // Change this to your frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+}));
 app.use(express.json());
 app.use("/tasks", taskRoutes);
 
