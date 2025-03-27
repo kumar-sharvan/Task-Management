@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/tasks";
+const API_BASE_URL = "https://task-management-backend-mhnb.onrender.com/tasks";
 
 export const getTasks = () => axios.get(API_BASE_URL);
 export const createTask = (task) => axios.post(API_BASE_URL, task);
